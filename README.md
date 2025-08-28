@@ -1,8 +1,10 @@
 # Secure File Sharing System  
 
-**Project:** Secure File Sharing System
-**Tools Used:** 
-**Date:** August 23, 2025
+
+**Project:** Secure File Sharing System  
+**Tools Used:** Python Flask, Postman, Ngrok,curl  
+**Prepared by:** Duncan Maganga  
+**Date:** August 23, 2025    
 
 
 ## Executive Summary
