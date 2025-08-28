@@ -20,12 +20,12 @@ In today's digital lanscape alot of attacks have recorded and ensuring that we h
 **Target:** Creating a Secure File Sharing System     
 **Tools:** Ngrok, curl, Postman, Signal, ProtonMail, Keybase, Flask, VS Code    
 **Approach:**  
-
             - Set up Flask to run the project creating virtual invirnment and installing pycryptodome  
             - Creating a basic route to handle uploads and downloads.    
             - Implement AES encryption rules and key management.    
             - Creating a basic HTML template containing basic login and handling file uploads and downloads.    
-            - Testing with Postman and curl.  
+            - Testing with Postman and curl. 
+            
 
 ## 1. Setting up Flask in Vs code
 
