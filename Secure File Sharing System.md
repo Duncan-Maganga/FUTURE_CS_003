@@ -17,9 +17,9 @@ In today's digital lanscape alot of attacks have recorded and ensuring that we h
 
 ## Tools and Technologies Used  
 
-This prpoject leverages a combination of backend frameworks, cryptography libraries, and frontend technologies to create a secure and functional file-sharing app.
-**Tools**  
+This prpoject leverages a combination of backend frameworks, cryptography libraries, and frontend technologies to create a secure and functional file-sharing app.  
 
+**Tools**  
      * **Python Flask:** Backend framework for handling file uploads and download routes and encryption logic.  
      * **PyCryptodome:** Python cryptography library used for implementing AES-256-GCM encryption and decryption.  
      * **HTML:** Frontend UI for file upload and download  
@@ -36,8 +36,7 @@ This prpoject leverages a combination of backend frameworks, cryptography librar
 On your terminal create a folder where you will be running your project, set up a virtual environemnt and install all the Flask packages. 
 create a basic app that will encrypt files before uploading and decrypting when downloading. 
 
-![screenshot](run.png)
-
+![screenshot](images/run.png)
 
 ### Quickstart  
 This code has utilizes AES-GCM which combines authenticationin one step which is mostly used in TLS/HTTPS and secure file storage, it also ensures that when someone tampers with the data the tag verification fails during decryption, giving assuarance of confidentiality and integrity. 
