@@ -39,8 +39,5 @@ create a basic app that will encrypt files before uploading and decrypting when 
 ![screenshot](images/run.png)
 
 ### Quickstart  
-This code has utilizes AES-GCM which combines authenticationin one step which is mostly used in TLS/HTTPS and secure file storage, it also ensures that when someone tampers with the data the tag verification fails during decryption, giving assuarance of confidentiality and integrity. 
-The same key used for encryption is the same key used to decrypt the data this is achieved by wrapping the key with the master key stored encrypted together proving good key management.
-
-
+This code utilizes AES-GCM, which combines authentication in one step, which is mostly used in TLS/HTTPS and secure file storage. It also ensures that when someone tampers with the data, the tag verification fails during decryption, giving assurance of confidentiality and integrity. The same key used for encryption is the same key used to decrypt the data. This is achieved by wrapping the key with the master key stored encrypted together, proving good key management.
 
