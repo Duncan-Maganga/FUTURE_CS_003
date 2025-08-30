@@ -66,6 +66,7 @@ The user request file from the server, the system immeadiatly decrypts the file 
 Master key(32 bytes) long term key is stored in master.key in env which is used to wrap/unwrap Data Encryption Keys(DEKs). This DEKs are randoml generated per file which encrypts file's content with AES-GCM. Ciphertext are stored on disk and wrapped DEK stored in DB.
 
 
-**Flow:** ==> File → encrypted with DEK → DEK wrapped with Master Key → both stored.  
-[screenshot](images/keys.png)  
+**Flow:** ==> File → encrypted with DEK → DEK wrapped with Master Key → both stored.   
+
+![screenshot](images/keys.png)  
 
