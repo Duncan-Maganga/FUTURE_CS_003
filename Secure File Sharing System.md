@@ -39,8 +39,9 @@ create a basic app that will encrypt files before uploading and decrypting when 
 ![screenshot](images/run.png)
 
 ### AES-GCM Encryption with Key Wrapping for Secure File Management
-This code utilizes AES-GCM, which combines authentication in one step, which is mostly used in TLS/HTTPS and secure file storage. It also ensures that when someone tampers with the data, the tag verification fails during decryption, giving assurance of confidentiality and integrity. The same key used for encryption is the same key used to decrypt the data. This is achieved by wrapping the key with the master key stored encrypted together, proving good key management.  
-![sreenshot](encryption.png)
+This code utilizes AES-GCM, which combines authentication in one step, which is mostly used in TLS/HTTPS and secure file storage. It also ensures that when someone tampers with the data, the tag verification fails during decryption, giving assurance of confidentiality and integrity. The same key used for encryption is the same key used to decrypt the data. This is achieved by wrapping the key with the master key stored encrypted together, proving good key management. 
+
+![sreenshot](images/encryption.png)
 
 ### Core application files   
 The following files were developed to implement the system    
@@ -49,3 +50,7 @@ The following files were developed to implement the system
 - **templates** - UI templates for file uploads and downloads  
 
 ### Running the application  
+
+![sreeenshot](images/ui.png)
+
+
