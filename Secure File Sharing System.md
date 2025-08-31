@@ -53,9 +53,12 @@ The following files were developed to implement the system
 
 ![sreeenshot](images/ui.png)
 
-## System Architecture
-**Secure File Sharing System** was designed with layered architecture mainly basing its forcus on confidentiality, Intergrity and Availability.  
-### Workflow
+## System Architecture  
+
+**Secure File Sharing System** was designed with layered architecture mainly basing its forcus on confidentiality, Intergrity and Availability.   
+
+### Workflow  
+
 1. **File Upload**    
 User uploads the file using Flask web portal build on HTML, the file immediately is encrypted using **AES-256-GCM** before is stored. All metadata eg filename, upload date, filepath etc is stored in the database.  
 2. **File Storage**  
@@ -64,11 +67,12 @@ Encrypted files are stored in the upload directory, this ensures that the files 
 The user request file from the server, the system immeadiatly decrypts the file using encryption keys. The file is decrypted and streamed to the client as plain text.  
 4. **Key Management**  
 Master key(32 bytes) long term key is stored in master.key in env which is used to wrap/unwrap Data Encryption Keys(DEKs). This DEKs are randoml generated per file which encrypts file's content with AES-GCM. Ciphertext are stored on disk and wrapped DEK stored in DB.
-5. **Ngrok**  
+5. **Global Access Ngrok**  
 This serves as a public gateway and lets remote users to test uploading/downloading files to the app while the system enforces encryption with Master Key + DEKs.  
 
-**Installing Ngrok**
+**Installing (Ngrok)**
 Register Ngrok from their website and get the authentication key.  
+
 on your teminal 
 ```
 ngrok config add-authtoken "YOUR TOKEN"
