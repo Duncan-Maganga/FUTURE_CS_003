@@ -19,16 +19,17 @@ In today's digital lanscape alot of attacks have recorded and ensuring that we h
 
 This prpoject leverages a combination of backend frameworks, cryptography libraries, and frontend technologies to create a secure and functional file-sharing app.  
 
-**Tools**  
-     * **Python Flask:** Backend framework for handling file uploads and download routes and encryption logic.  
-     * **PyCryptodome:** Python cryptography library used for implementing AES-256-GCM encryption and decryption.  
-     * **HTML:** Frontend UI for file upload and download  
-     * **dotenv:** Secure storage environment for storing encryption keys.  
-     * **Postman:** API testing tool for verifying uploads and downloads endpoints  
-     * **curl:** CLI for testing API request and encryption output  
-     * **Git & Github:** Version contol and collaboaration platform for managing project code.  
-     * **Checksum Tools(SHA256):** For verifying intergrity before and after encryption and decryption.  
-     * **Ngrok:** A tool used to create secure tunnel from your local machine to the internet.  
+**Tools and Technologies Used** 
+
+- **Python Flask:** Backend framework for handling file uploads and download routes and encryption logic.  
+- **PyCryptodome:** Python cryptography library used for implementing AES-256-GCM encryption and decryption.  
+- **HTML:** Frontend UI for file upload and download  
+- **dotenv:** Secure storage environment for storing encryption keys.  
+- **Postman:** API testing tool for verifying uploads and downloads endpoints  
+- **curl:** CLI for testing API request and encryption output  
+- **Git & Github:** Version contol and collaboaration platform for managing project code.  
+- **Checksum Tools(SHA256):** For verifying intergrity before and after encryption and decryption.  
+- **Ngrok:** A tool used to create secure tunnel from your local machine to the internet.  
      
 
 ## 1. Setting up Flask in Vs code
@@ -70,7 +71,8 @@ Master key(32 bytes) long term key is stored in master.key in env which is used 
 5. **Global Access Ngrok**  
 This serves as a public gateway and lets remote users to test uploading/downloading files to the app while the system enforces encryption with Master Key + DEKs.  
 
-**Installing (Ngrok)**
+**Installing (Ngrok)**  
+
 Register Ngrok from their website and get the authentication key.  
 
 on your teminal 
@@ -85,11 +87,22 @@ ngrok will give you a link that can be shared.
 
 ![sreenshot](images/ngrok.png)
 
- 
-
-
 
 **Flow:** ==> File → encrypted with DEK → DEK wrapped with Master Key → both stored.   
 
 ![screenshot](images/keys.png)  
+
+## CIA Triad - How it's Ensured  
+
+**Confidentiality (AES 256 file encryption) ===> Integrity (SHA-256 hash + RSA signature) ===> Authentication (Digital signature from verified sender)**  
+
+## Why AES? Why Not Other Algorithms?  
+
+I chose AES for the following reasons:  
+
+- **Performance:** AES is higly optimized for both hardware and softwares, ensuring fast encryption and decryption processes.
+- **Security:** AES-256 is a global trusted standard, and resistant to all attacks.
+- **Simpliciity:** AES uses a single key for both encryption/decryptio, wshich simplies key management.
+- **Wide Adoption:** AES is widely adopted and supported by many cryptographic libraries and hardware implementations.
+
 
