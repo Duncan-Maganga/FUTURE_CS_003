@@ -71,6 +71,15 @@ Master key(32 bytes) long term key is stored in master.key in env which is used 
 5. **Global Access Ngrok**  
 This serves as a public gateway and lets remote users to test uploading/downloading files to the app while the system enforces encryption with Master Key + DEKs.  
 
+### Use of ngrok for Global access 
+
+**What is ngrok**  
+- Ngrok is a tool that provide a secure tunnel to your local machine, allowing it to be accessed globaly via public URl.
+
+**Why Ngrok**  
+- **Zero-configuration tunneling:** Instantly expose local servers to the web withiout firewal or network configuration.  
+- **HTTPS tunneling:** Encrypted connection to ensure secure access.
+  
 **Installing (Ngrok)**  
 
 Register Ngrok from their website and get the authentication key.  
