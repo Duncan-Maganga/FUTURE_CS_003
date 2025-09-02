@@ -92,7 +92,7 @@ Start your tunnel
 ```
 ngrok http 5000
 ```
-ngrok will give you a link that can be shared.  
+ngrok will give you a link that can be shared.   
 
 ![sreenshot](images/ngrok.png)
 
