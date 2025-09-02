@@ -111,7 +111,34 @@ I chose AES for the following reasons:
 
 - **Performance:** AES is higly optimized for both hardware and softwares, ensuring fast encryption and decryption processes.
 - **Security:** AES-256 is a global trusted standard, and resistant to all attacks.
-- **Simpliciity:** AES uses a single key for both encryption/decryptio, wshich simplies key management.
+- **Simpliciity:** AES uses a single key for both encryption/decryption, which simplies key management.
 - **Wide Adoption:** AES is widely adopted and supported by many cryptographic libraries and hardware implementations.
+
+## Risk and Migitigations  
+
+While the system provides a strong baseline for secure file sharing, several risk remain that should remain that should be addressed in production env.  
+1. **Key Exposure.**
+   - If the leaked is leaked all the encrypted file could be exposed or compromised. To avoid such cases we implement a secure key management system (KMS) such as AWS KMS, HashiCorp Vault, or Azure Key Vault, which regularly rotate keys and restrict access through role based controls.
+2. **Insecure Transmission.**
+   - Without proper HTTPS/TLS configuration, files in transit may be intercepted, proper mitigation for this is to deploy Flask app behind HTTPS with TLS 1.3 enabled and use or valid certificates from Let's Encrypt and Trusted CA.
+3. **Unauthorized Access.**
+   - The system does not enforce user authentication, the best mitigation for this is to add authentication and Role Based Controls (RBC), which allows user to access thier own files.
+4. **File Injection.**
+   - Attackers may attemt to upload malicious files to the server this will be mitigated by enforcing file type validation, limit maximum file size, and intration of malware tools such as ClamAV.
+5. **Denial of Attack(DoS) via large file Uploads**
+   - Excessively large file uploads may exhaust server resources, this can be mitigated by configuring uploads size limits, and implementing rate limit.
+
+
+
+## Recomendations  
+
+To strengthen this system for real world deployment, I recommend the following should be improved.  
+
+- Intergating Secure Key Managent by moving from static environment to a centralized KMS.
+- Enabling Strong Authentication by implementing login functionslity with salted password hashing and session management.
+- Auditing logs by maintaing detailed logs for uploads, downloads, and tampering for forensic analysis.
+- Automating Backup and Recovery but making sure encrypted files should be backedup securely to prevent accidental loss.
+- Continuous security testing by conducting regular penetration testing, fuzzing, and automated vulnerability scans.  
+
 
 
