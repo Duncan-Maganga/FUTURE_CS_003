@@ -101,6 +101,24 @@ ngrok will give you a link that can be shared.
 
 ![screenshot](images/keys.png)  
 
+## API Resiliance Testing Using Postman  
+
+The API responded correctly to valid requests with a 200 OK status and rejected invalid or malformed inputs with appropriate error codes (400/401). This confirms that the endpoint is handling requests as designed.
+
+![screenshot](images/post.png)
+
+## File Download and Integrity Verification Test
+
+A file was downloaded from the API endpoint using the curl command. The file was saved in the local images directory under and named it **download.png**, Its pupose is to validate that the file could be retrieved successfully and that its integrity could be confirmed using a hash check.  
+
+![screenshot](images/download.png)  
+
+## Integrity Verification  
+
+I verified the downloaded  file using the **shasum -a 256** command. The computed SHA-256 hash matched the original image’s hash, confirming the file’s integrity and that the download was successful.
+
+![screenshot](images/shasum.png)  
+
 ## CIA Triad - How it's Ensured  
 
 **Confidentiality (AES 256 file encryption) ===> Integrity (SHA-256 hash + RSA signature) ===> Authentication (Digital signature from verified sender)**  
