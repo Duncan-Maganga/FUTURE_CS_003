@@ -111,7 +111,7 @@ The API responded correctly to valid requests with a 200 OK status and rejected 
 
 A file was downloaded from the API endpoint using the curl command. The file was saved in the local images directory under and named it **download.png**, Its pupose is to validate that the file could be retrieved successfully and that its integrity could be confirmed using a hash check.  
 
-![screenshot](images/download.png)  
+![screenshot](images/curl.png)  
 
 ## Integrity Verification  
 
