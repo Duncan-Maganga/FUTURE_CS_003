@@ -37,7 +37,7 @@ This prpoject leverages a combination of backend frameworks, cryptography librar
 On your terminal create a folder where you will be running your project, set up a virtual environemnt and install all the Flask packages. 
 create a basic app that will encrypt files before uploading and decrypting when downloading. 
 
-![screenshot](images/setup.png)
+![screenshot](images/setup.jpeg)
 
 ### AES-GCM Encryption with Key Wrapping for Secure File Management
 This code utilizes AES-GCM, which combines authentication in one step, which is mostly used in TLS/HTTPS and secure file storage. It also ensures that when someone tampers with the data, the tag verification fails during decryption, giving assurance of confidentiality and integrity. The same key used for encryption is the same key used to decrypt the data. This is achieved by wrapping the key with the master key stored encrypted together, proving good key management. 
